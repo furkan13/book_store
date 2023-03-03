@@ -8,6 +8,27 @@
 </head>
 <body>
 <h2>Show All Books</h2>
+<h1>Book List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Book Name</th>
+        <th>Book publish Date</th>
+        <th>Author Name</th>
+        <th>Overview
+        <th>ISBN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${bookList}">
+        <td th:text="${book.bookName}"></td>
+        <td th:text="${book.publishDate}"></td>
+        <td th:text="${book.authorName}"></td>
+        <td th:text="${book.overview}"></td>
+        <td th:text="${book.ISBN}"></td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
