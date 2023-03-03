@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<link rel="icon" href="img/logo.png" type="image/icon type">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+<h2>Input your book details</h2>
+
+<form action="/add-book" th:object="${Book}" method="post">
+    <ul>
+        <li>
+            <label for="Book name"> Book Name:</label>
+            <input type="text" id="Book name" th:field="*{bookName}" name="Book Name"/>
+        </li>
+        <li>
+            <label for="Author name"> Author Name:</label>
+            <input type="text" id="Author name" th:field="*{authorName}" name="Author Name"/>
+        </li>
+        <li>
+            <label for="Publish Date"> Publish Date:</label>
+            <input type="date" id="Publish Date" th:field="*{publishDate}" name="Publish Date"/>
+        </li>
+        <li>
+            <label for="ISBN Number"> ISBN Number:</label>
+            <input type="number" id="ISBN Number" th:field="*{ISBN}" name="ISBN Number"/>
+        </li>
+        <li>
+            <label for="Rating">Rating:</label>
+            <input type="number" id="rating" name="rating" th:field="*{rating}"/>
+        </li>
+        <li>
+            <label for="overview">Overview:</label>
+            <textarea id="overview" th:field="*{overview}" name="user_message"></textarea>
+        </li>
+    </ul>
+    <div class="button">
+        <button type="submit">Add Book</button>
+    </div>
+
+
+</form>
+
+</body>
+</html>
